@@ -1,0 +1,36 @@
+<section class="text-light">
+    <div class="container pt-5">
+        <div class="row pt-5 justify-content-center align-items-center">
+            <div class="col-md-8 ">
+                <form [formGroup]='loginform' (ngSubmit)='logindata(loginform)'>
+
+                    <input [class.is-valid]="loginform.get('email').valid" class="form-control mb-2" type="email"
+                        formControlName="email" placeholder="E-mail">
+                    <div class="alert alert-danger mb-2"
+                        *ngIf="loginform.get('email').invalid&&loginform.get('email').touched"> not
+                        valid</div>
+
+                    <input [class.is-valid]="loginform.get('password').valid" class="form-control mb-2" type="password"
+                        formControlName="password" placeholder="Password">
+                    <div class="alert alert-danger mb-2"
+                        *ngIf="loginform.get('password').invalid&&loginform.get('password').touched"> not
+                        valid</div>
+
+
+                    <button [disabled]="!loginform.valid" type="submit" class="btn btn-danger text-center"><span
+                            *ngIf="issign==false">Sign in</span>
+                        <span *ngIf="issign==true">Waiting...</span></button>
+                    <span class="text-info float-right" routerLink="/signup">Register Now</span>
+                    <div class="alert alert-success mt-2" *ngIf="isSuccess==true"> {{responemsg}}</div>
+                    <div class="alert alert-danger mt-2" *ngIf="isdanger==true"> "User dosn't Exist"</div>
+
+
+                </form>
+
+
+
+
+            </div>
+        </div>
+    </div>
+</section>

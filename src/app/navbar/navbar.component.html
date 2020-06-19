@@ -1,0 +1,24 @@
+<section>
+    <div class="container">
+        <nav class="navbar navbar-expand navbar-dark  bg-faded">
+            <a class="navbar-brand" href="#">Movies website</a>
+            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                <li class="nav-item active" *ngIf="islogin==true">
+                    <a  class="nav-link" href="#" routerLink="/home">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item" *ngIf="islogin==true">
+                    <a   class="nav-link" href="#">Movies Details</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" routerLink='/login'>Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" routerLink='/signup'>Sign Up</a>
+                </li>
+
+
+            </ul>
+           
+        </nav>
+    </div>
+</section>

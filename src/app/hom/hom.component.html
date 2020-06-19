@@ -1,0 +1,42 @@
+<section >
+
+<div class="container pt-5 ">
+
+    <div class="row">
+
+        <div class="text-light col-md-4 d-flex align-items-center justify-content-center border-bottom">
+            <h1>most trending movies</h1></div>
+        <div *ngFor="let movie of trendingmovies" class="col-md-2">
+        <div class="my-1 ">
+
+         <div class="movie-title ">   <p class="text-light">{{movie.title}}</p></div>
+         <div class="movie-poster position-relative">  <img class="w-100" [src]="imgprefix+movie.poster_path">
+            <div class="vote-avg d-flex justify-content-center align-items-center"><span>{{movie.vote_average}}</span></div>
+        </div>
+      
+        </div>    
+
+
+        </div>
+    </div>
+    <div class="row">
+
+        <div class="text-light col-md-4 d-flex align-items-center justify-content-center border-bottom">
+            <h1 class="text-capitalize">most trending TV show</h1></div>
+        <div *ngFor="let tv of trendingtv" class="col-md-2">
+        <div class="my-1 ">
+
+         <div class="movie-title ">   <p class="text-light">{{tv.name}}</p></div>
+         <div class="movie-poster position-relative">  <img class="w-100" [src]="imgprefix+tv.poster_path">
+            <div class="vote-avg d-flex justify-content-center align-items-center"><span>{{tv.vote_average}}</span></div>
+        </div>
+      
+        </div>    
+
+
+        </div>
+    </div>
+    
+
+
+</div></section>

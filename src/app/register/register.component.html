@@ -1,0 +1,52 @@
+<section class="text-light">
+    <div class="container pt-5">
+        <div class="row pt-5 justify-content-center align-items-center">
+            <div class="col-md-8 ">
+                <form [formGroup]='registerform' (ngSubmit)='signupdata(registerform)'>
+                    <input [class.is-valid]="registerform.get('first_name').valid" class="form-control mb-2" type="text"
+                        formControlName="first_name" placeholder="First Name">
+                    <div class="alert alert-danger mb-2"
+                        *ngIf="registerform.get('first_name').invalid&&registerform.get('first_name').touched"> not
+                        valid</div>
+
+                    <input [class.is-valid]="registerform.get('last_name').valid" class="form-control mb-2" type="text"
+                        formControlName="last_name" placeholder="Last Name">
+                    <div class="alert alert-danger mb-2"
+                        *ngIf="registerform.get('last_name').invalid&&registerform.get('last_name').touched"> not
+                        valid</div>
+
+                    <input [class.is-valid]="registerform.get('age').valid" class="form-control mb-2" type="number"
+                        formControlName="age" placeholder="Age">
+                    <div class="alert alert-danger mb-2"
+                        *ngIf="registerform.get('age').invalid&&registerform.get('age').touched"> not
+                        valid</div>
+
+                    <input [class.is-valid]="registerform.get('email').valid" class="form-control mb-2" type="email"
+                        formControlName="email" placeholder="E-mail">
+                    <div class="alert alert-danger mb-2"
+                        *ngIf="registerform.get('email').invalid&&registerform.get('email').touched"> not
+                        valid</div>
+
+                    <input [class.is-valid]="registerform.get('password').valid" class="form-control mb-2"
+                        type="password" formControlName="password" placeholder="Password">
+                    <div class="alert alert-danger mb-2"
+                        *ngIf="registerform.get('password').invalid&&registerform.get('password').touched"> not
+                        valid</div>
+
+
+                    <button [disabled]="!registerform.valid" type="submit"
+                        class="btn btn-danger text-center"><span *ngIf="issign==false">Sign Up</span>
+                        <span *ngIf="issign==true">Waiting...</span></button><a class="text-info float-right" routerLink="/login">do You have an account?</a>
+                    <div class="alert alert-success mt-2" *ngIf="isSuccess==true"> {{responemsg}}</div>
+
+
+
+                </form>
+
+
+
+
+            </div>
+        </div>
+    </div>
+</section>

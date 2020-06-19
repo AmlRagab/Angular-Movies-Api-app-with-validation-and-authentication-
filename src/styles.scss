@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+$dark-bg : #232223;
+
+body {
+    background-color:$dark-bg;
+    font-family: 'Raleway', sans-serif;
+}
+.vote-avg {
+    background-color: #3EA2FF ;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    color: white;
+    transform: translateX(100%);
+    transform: translateY(-100%);
+}
+.my-btn{
+    background-color: #B11508 ;
+    color: white;
+}
